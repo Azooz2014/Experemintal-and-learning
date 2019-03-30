@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capture"
+        android:id="@+id/btnCapture"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/enter_photo_title"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editTextTitle"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSave"
+        android:text="@string/save"
+        android:layout_alignTop="@id/btnCapture"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTag3"
+        android:hint="@string/tag3"
+        android:layout_above="@id/btnCapture"
+        android:layout_alignLeft="@id/btnCapture"
+        android:layout_alignStart="@id/btnCapture"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTag2"
+        android:hint="@string/tag2"
+        android:layout_above="@id/editTextTag3"
+        android:layout_alignLeft="@id/editTextTag3"
+        android:layout_alignStart="@id/editTextTag3"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTag1"
+        android:hint="@string/tag1"
+        android:layout_above="@id/editTextTag2"
+        android:layout_alignLeft="@id/editTextTag2"
+        android:layout_alignStart="@id/editTextTag2"
+        android:layout_marginBottom="24dp"/>
+
+</RelativeLayout>
