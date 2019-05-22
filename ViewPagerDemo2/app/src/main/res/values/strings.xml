@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ViewPager Demo</string>
+    <string name="hint">Editor:#%d</string>
+</resources>

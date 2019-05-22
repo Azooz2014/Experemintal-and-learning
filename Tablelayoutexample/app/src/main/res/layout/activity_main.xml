@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/name"
+            android:text="@string/name"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif"/>
+
+        <EditText
+            android:id="@+id/editName"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/hint_name"
+            android:fontFamily="sans-serif"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/hobbies"
+            android:text="@string/hobbies"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif"/>
+
+        <EditText
+            android:id="@+id/editHobbies"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/what_you_love_to_do"
+            android:fontFamily="sans-serif"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" />
+    </TableRow>
+
+    <TableRow>
+        <CheckBox
+
+            android:layout_column="1"
+            android:text="@string/programmer"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif"
+            />
+    </TableRow>
+
+    <Button
+        android:text="@string/btn_ok"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        />
+</TableLayout>

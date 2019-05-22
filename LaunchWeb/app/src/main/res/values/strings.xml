@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Launch Web</string>
+    <string name="url">Enter a URL</string>
+    <string name="launch">Launch</string>
+</resources>

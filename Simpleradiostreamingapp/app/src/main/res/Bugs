@@ -1,0 +1,7 @@
+- Loading bar keeps rotating even when the music is buffered or media stopped.
+
+feature to add:
+
+1- TextView that displays the media buffering percentage plus the loading bar progress.
+2- Background playing.
+3- TextView displaying the name of the song currently playing.

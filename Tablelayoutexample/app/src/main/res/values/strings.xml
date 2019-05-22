@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Table layout example</string>
+    <string name="name">Name:</string>
+    <string name="hint_name">Enter a name</string>
+    <string name="hobbies">Hobbies:</string>
+    <string name="what_you_love_to_do">What do you love to do?</string>
+    <string name="programmer">Are you a programmer?</string>
+    <string name="btn_ok">OK</string>
+</resources>
