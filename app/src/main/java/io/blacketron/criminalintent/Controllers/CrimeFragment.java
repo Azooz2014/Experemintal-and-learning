@@ -10,6 +10,9 @@ import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -50,6 +53,7 @@ public class CrimeFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
 
         /*Retrieving whatever UUID object was saved to ARG_CRIME_ID String key when fragment
         * first created or re-created.*/
@@ -58,6 +62,13 @@ public class CrimeFragment extends Fragment {
 
         /*Fetching and getting Crime saved in CrimeLab based on it's ID.*/
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        CrimeLab.get(getContext()).updateCrime(mCrime);
     }
 
     @Nullable
@@ -135,5 +146,39 @@ public class CrimeFragment extends Fragment {
 
     private void updateDate() {
         mDateButton.setText(mCrime.getDate().toString());
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.fragment_crime_list, menu);
+
+        MenuItem deleteCrime = menu.findItem(R.id.delete_crime);
+        MenuItem subtitle = menu.findItem(R.id.show_subtitle);
+        MenuItem addCrime = menu.findItem(R.id.new_crime);
+
+        deleteCrime.setVisible(true);
+        subtitle.setVisible(false);
+        addCrime.setVisible(false);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch(item.getItemId()){
+
+            case R.id.delete_crime:
+
+                if(mCrime.getId() != null){
+
+                    CrimeLab.get(getContext()).removeCrime(mCrime);
+                    getActivity().finish();
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 }
